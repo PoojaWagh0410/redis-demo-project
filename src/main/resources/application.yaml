@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: RedisDemo
+
+  redis:
+    host: localhost
+    port: 6379
+
+  logging:
+    level:
+      root: INFO
+      org.springframework.data.redis: DEBUG
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/Redis_demo?useSSL=false&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+    username: root
+    password: Root@1234
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
